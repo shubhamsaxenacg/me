@@ -1,0 +1,141 @@
+package employee;
+
+public class Employee {
+	private int id;
+	private String name;
+	private double monthlyBasic;
+	private static  double hraPercentage = 50;
+	private static  double pfPercentage = 10;
+	private static  double esicPercentage = 4.75;
+	private static final double medicalAllowance = 1250;
+	private static final double conveyanceAllowance = 800;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getMonthlyBasic() {
+		return monthlyBasic;
+	}
+	public void setMonthlyBasic(double monthlyBasic) {
+		this.monthlyBasic = monthlyBasic;
+	}
+	
+	public double getAnnualBasic()
+	{
+		double annualBasic = 12 * monthlyBasic;
+		return annualBasic;
+	}
+	
+	
+	public double hraCalculate()
+	{
+		double hra = 50 * monthlyBasic /100;
+		return hra;
+	}
+	
+	
+//...........PF CALCULATOR..............	
+	public double getPf()
+	{
+		double pf = pfPercentage * monthlyBasic /100;
+		if(pf>6500)
+		{
+			pf = 6500;
+		}
+		return pf;
+	}
+	
+//...........ESIC CALCULATOR..............
+	public double getEsic()
+	{
+		double esic;
+		if(monthlyBasic<=5000)
+		{
+			esic = esicPercentage * monthlyBasic /100;
+		}
+		else
+		{
+			esic = 0.0;
+		}
+		return esic;
+	}
+	
+//...........PROFESSIONAL TAX CALCULATOR..........
+		public double getProfTax()
+		{
+			double profTax;
+			double monthlyGross = getMonthlyGrossSalary();
+			if(monthlyGross<=10_000)
+			{
+				profTax = 50;
+			}
+			else
+				profTax = 100;
+			
+			return profTax;
+			
+		}
+	
+	
+	
+	public double getMonthlyGrossSalary()
+	{
+		double hra = hraCalculate();
+		double monthlyGrossSalary = monthlyBasic + hra + medicalAllowance + conveyanceAllowance;
+		return monthlyGrossSalary;
+	}
+	
+	public double getAnnualGrossSalary()
+	{
+		double monthlyGrossSalary = getMonthlyGrossSalary();
+		double annualGrossSalary = 12 * monthlyGrossSalary;
+		return annualGrossSalary;
+		
+	}
+
+	public double getMonthlyDeductions()
+	{
+		double pf = getPf();
+		double esic = getEsic();
+		double profTax = getProfTax();
+		
+		double monthlydeductions = pf + esic + profTax;
+		return monthlydeductions;
+		
+	}
+	
+	public double getMonthlyTakeHome()
+	{
+		double monthlyGrossSalary = getMonthlyGrossSalary();
+		double monthlyDeductions = getMonthlyDeductions();
+		
+		double monthlyTakeHome = monthlyGrossSalary - monthlyDeductions;
+		return monthlyTakeHome;
+	}
+	
+	public double getAnnualTakeHome()
+	{
+		double monthlyTakeHome = getMonthlyTakeHome();
+		double annualTakeHome = 12 * monthlyTakeHome;
+		return annualTakeHome;
+	}
+	
+	public static double getPfPercentage() {
+		return pfPercentage;
+	}
+	public static void setPfPercentage(double pfPercentage) {
+		Employee.pfPercentage = pfPercentage;
+	}
+	
+	
+
+}

@@ -1,0 +1,20 @@
+package com.calculator.test;
+
+import static org.junit.Assert.*;
+
+
+import org.junit.Test;
+
+import com.calculator.tax.CountrynotValidException;
+import com.calculator.tax.TaxCalculator;
+
+public class CalculatorTest {
+
+
+	@Test(expected = CountrynotValidException.class)
+	public void isIndian() throws CountrynotValidException{
+		TaxCalculator taxCalculator = new TaxCalculator();
+		taxCalculator.calculateTax("",false, 34000);
+		}
+
+}

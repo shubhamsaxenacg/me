@@ -1,0 +1,12 @@
+package TrainingAssignment;
+
+public class TrainingCost {
+	public static void main(String args[])
+	{
+		Training training = new PublicTraining("Java", 5000, 50);
+		System.out.println("Cost of Public training is : "+training.getOrderValue());
+		
+		Training training = new CorporateTraining("Bigdata", 35000, 4);
+		System.out.println("Cost of Corporate training is : "+training.getOrderValue());
+	}
+}

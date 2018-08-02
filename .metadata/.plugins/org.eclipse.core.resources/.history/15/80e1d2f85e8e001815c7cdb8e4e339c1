@@ -1,0 +1,28 @@
+package question1;
+
+public class First {
+	int a1;
+	int b1;
+	First()
+	{
+		System.out.println("First Class without constructor");
+	}
+	First(int a1, int b1)
+	{
+		this.a1 = a1;
+		this.b1 = b1;
+		System.out.println("This is First Class with parameter passed in constructor");
+	}
+	
+	public void display()
+	{
+		System.out.println("Displaying First class...");
+	}
+	
+	public void disp()
+	{
+		System.out.println("Displaying First class using disp function...");
+	}
+
+
+}

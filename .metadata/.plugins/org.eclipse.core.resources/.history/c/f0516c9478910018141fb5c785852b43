@@ -1,0 +1,12 @@
+package com.calculator.tax;
+
+public class TaxCalculator {
+
+	public void calculateTax(String name, boolean indian, int empSal) throws CountrynotValidException {
+		
+			if (name == "")
+				throw new CountrynotValidException("The employee should not be empty....");
+
+	}
+
+}

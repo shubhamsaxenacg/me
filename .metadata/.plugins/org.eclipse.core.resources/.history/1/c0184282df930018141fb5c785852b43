@@ -1,0 +1,19 @@
+package com.cg.question1;
+
+import java.util.Arrays;
+import java.util.Set;
+import java.util.TreeSet;
+
+
+public class BankAccountList extends CollectionObject{
+
+	void accountList()
+	{
+		CollectionObject co =new CollectionObject();
+		Set<SavingAccount>account = new TreeSet<SavingAccount>();
+		for( String x : co.savingAcc)
+			account.addAll(x);
+		
+	}
+	
+}

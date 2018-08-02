@@ -1,0 +1,9 @@
+package TrainingAssignment;
+
+public abstract class Training {
+	protected int id;
+	protected String subject;
+	protected int fees;
+	
+	abstract int getOrderValue();
+}

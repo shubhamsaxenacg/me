@@ -1,0 +1,11 @@
+package question1;
+
+public class Two {
+	public static void main(String args[])
+	{
+		First first = new Second();
+		
+		first.display();
+		
+	}
+}

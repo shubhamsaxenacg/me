@@ -1,0 +1,19 @@
+package classes;
+import java.util.*;
+public class Circle {
+	Scanner sc = new Scanner(System.in);	
+	private int radius;
+	private int area;
+	
+	Circle()
+	{
+		System.out.print("Enter the radius of rectangle");
+		radius = sc.nextInt();
+	}
+	
+	public int areaOfCircle()
+	{
+		area= 3.14*radius*radius;
+		return area;
+	}
+}

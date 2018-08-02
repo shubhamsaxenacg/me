@@ -1,0 +1,89 @@
+package car;
+
+public class Vehicle {
+	private int speed;
+	private double direction;
+	private String ownerName;
+	private static int highestVehicleId = 0;
+	private final int vehicleId;
+	
+	
+	public Vehicle() {
+		super();
+		vehicleId = highestVehicleId +1;
+		highestVehicleId++;
+	}
+
+	public Vehicle(String ownerName) {
+		super();
+		this.ownerName = ownerName;
+		vehicleId = highestVehicleId +1;
+		direction = 0;
+		highestVehicleId++;
+	}
+	
+	public void changeSpeed(int speed)
+	{
+		this.speed = speed;
+	}
+	
+	public void stopSpeed()
+	{
+		
+		speed = 0;
+	}
+	
+	public double turn(double angle)
+	{
+		direction = direction +angle;
+		if(direction>360)
+		{
+			direction = 360-direction;
+		}
+		return direction;
+	}
+	
+	public double turn(String directionHand)
+	{
+		if(directionHand.equals("right"))
+		{
+			direction = direction+90;
+			if(direction>360 || direction<0)
+			{
+				direction = 360-direction;
+			}
+			
+		}
+		else
+		{
+			direction = direction-90;
+			if(direction>360 || direction<0) 
+			{
+				direction = 360-direction;
+			}
+		}
+		return direction;
+	}
+	
+	public static int getHighestVehicleId()
+	{
+		return highestVehicleId;
+	}
+
+	@Override
+	public String toString() {
+		return "Vehicle [speed=" + speed + ", direction=" + direction + ", ownerName=" + ownerName + ", vehicleId="
+				+ vehicleId + "]";
+	}
+	
+//	public String toString()
+//	{
+//		String vehicleDetails;
+//		vehicleDetails = "the vehicle with Registration ID: " + vehicleId + " have owner " +ownerName+ " and have current speed: "+speed+ " and direction "+direction;
+//		return vehicleDetails;
+//	}
+//	
+	
+	
+	
+}

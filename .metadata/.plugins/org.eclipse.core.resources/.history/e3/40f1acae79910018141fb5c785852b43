@@ -1,0 +1,8 @@
+package com.calculator.tax;
+
+public class NamenotValidException extends Exception {
+
+	public NamenotValidException(String message) {
+		super(message);
+	}
+}

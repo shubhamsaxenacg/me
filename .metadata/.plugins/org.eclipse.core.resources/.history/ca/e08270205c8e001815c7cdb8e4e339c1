@@ -1,0 +1,17 @@
+package question1;
+
+public class Second extends First{
+	
+	int a2;
+	int b2;
+	
+	Second()
+	{
+		super();
+		System.out.println("Second Class");
+	}
+
+	
+	
+
+}

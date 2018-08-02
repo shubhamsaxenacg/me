@@ -1,0 +1,10 @@
+package multiDimensionalArrayCheck;
+
+public class CheckArray {
+	
+	public void findElement(String array[][], int rowLength, int colLength)
+	{
+		
+	}
+
+}

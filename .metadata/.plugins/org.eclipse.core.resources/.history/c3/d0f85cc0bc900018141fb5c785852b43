@@ -1,0 +1,10 @@
+package com.calculator.tax;
+
+public class TaxCalculator {
+
+	public String calculateTax(String string, boolean indian, int empSal) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

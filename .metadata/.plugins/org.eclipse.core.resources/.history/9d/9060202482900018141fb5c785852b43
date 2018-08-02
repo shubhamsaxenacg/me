@@ -1,0 +1,7 @@
+package InterfaceAssignment1;
+
+public interface A {
+	default void disp1() {// interface A disp2 method
+	System.out.println("Interface A");
+	}
+}

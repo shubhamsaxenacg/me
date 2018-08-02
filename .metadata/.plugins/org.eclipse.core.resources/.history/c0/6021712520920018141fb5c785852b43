@@ -1,0 +1,31 @@
+package com.cg.collections;
+
+public class Student implements Comparable<Student>{
+	String name;
+	int u_id;
+	String favouriteFruit;
+	
+	public Student(int u_id, String name, String favouriteFruit) {
+		super();
+		this.name = name;
+		this.u_id = u_id;
+		this.favouriteFruit = favouriteFruit;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", u_id=" + u_id + "favouriteFruit=" + favouriteFruit +"]";
+	}
+
+
+	@Override
+	public int compareTo(Student student) {
+		// TODO Auto-generated method stub
+		
+		return (name.compareTo(student.name));
+	}
+
+	
+	
+	
+}

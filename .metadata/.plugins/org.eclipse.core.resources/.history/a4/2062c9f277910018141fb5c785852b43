@@ -1,0 +1,13 @@
+package com.calculator.tax;
+
+public class CountrynotValidException extends Exception {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public CountrynotValidException(String message) {
+		super(message);
+	}
+}

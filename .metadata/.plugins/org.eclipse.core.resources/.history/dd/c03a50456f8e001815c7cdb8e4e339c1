@@ -1,0 +1,8 @@
+package question7;
+
+public class ClassA {
+	void display()
+	{
+		System.out.println("this displays function of classA");
+	}
+}

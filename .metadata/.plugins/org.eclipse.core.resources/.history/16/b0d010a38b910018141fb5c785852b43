@@ -1,0 +1,10 @@
+package com.calculator.tax;
+
+public class TaxNotEligibleException extends RuntimeException{
+
+	public TaxNotEligibleException(String string) {
+		// TODO Auto-generated constructor stub
+		super(string);
+	}
+
+}

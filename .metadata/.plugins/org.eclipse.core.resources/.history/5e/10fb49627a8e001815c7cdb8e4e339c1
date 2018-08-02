@@ -1,0 +1,17 @@
+package TrainingAssignment;
+
+public abstract class Training {
+	protected static int id = 1;
+	protected String subject;
+	protected int fees;
+	
+	public Training(String subject, int fees) {
+				
+		this.subject = subject;
+		this.fees = fees;
+		
+		id++;
+	}
+
+	abstract int getOrderValue();
+}

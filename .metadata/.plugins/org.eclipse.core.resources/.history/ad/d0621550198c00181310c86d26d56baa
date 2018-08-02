@@ -1,0 +1,53 @@
+package employee;
+
+public class Employee {
+	private int id;
+	private String name;
+	private double monthlyBasic;
+	private static  double hraPercentage = 50;
+	private static  double pfPercentage = 10;
+	private static  double esicPercentage = 4.75;
+	private static final double medicalAllowance = 1250;
+	private static final double conveyanceAllowance = 800;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getMonthlyBasic() {
+		return monthlyBasic;
+	}
+	public void setMonthlyBasic(double monthlyBasic) {
+		this.monthlyBasic = monthlyBasic;
+	}
+	
+	public double getAnnualBasic()
+	{
+		double annualBasic = 12 * monthlyBasic;
+		return annualBasic;
+	}
+	
+	
+	public double hraCalculate()
+	{
+		int hra = 50 * monthlyBasic /100;
+		return hra;
+	}
+	
+	public double getMonthlyGrossSalary()
+	{
+		double hra = hraCalculate();
+		double monthlyGrossSalary = monthlyBasic + hra + medicalAllowance + conveyanceAllowance;
+		return annualBasic;
+	}
+
+
+}

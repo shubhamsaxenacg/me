@@ -1,0 +1,24 @@
+package in.co.cg.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import in.co.cg.calculator.Maths;
+
+public class CalcTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	void testAddTwoPositive() {
+		Maths math = new Maths();
+		int ans = math.add(3,4);
+		Assert.assertEquals(7,ans);
+	}
+
+}

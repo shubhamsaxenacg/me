@@ -1,0 +1,11 @@
+package TrainingAssignment;
+
+public class CorporateTraining extends Training{
+
+	private int days;
+	
+	int getOrderValue() {
+		return fees*days;
+	}
+
+}

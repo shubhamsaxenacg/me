@@ -1,0 +1,25 @@
+package Discount;
+
+import java.util.Scanner;
+
+
+public class Discount {
+	public static void main(String args[])
+	{
+		Calculate calculate = new Calculate();
+		Scanner scanner = new Scanner(System.in);
+		
+		double originalPrice, discountValue;
+		System.out.println("Enter the original Value");
+		originalPrice = scanner.nextDouble();
+		
+		calculate.setValue(originalPrice);
+		double discountValue1 = calculate.discountCalculate();
+		System.out.println("Discount Price: "+discountValue1);
+		
+		double finalPrice = calculate.afterDiscountFinal(discountValue1);
+		
+		scanner.close();
+	}
+
+}

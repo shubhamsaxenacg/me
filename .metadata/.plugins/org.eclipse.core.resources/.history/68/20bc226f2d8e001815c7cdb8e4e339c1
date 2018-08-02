@@ -1,0 +1,16 @@
+package Distance;
+
+public class DistanceTest {
+
+	public static void main(String[] args) {
+		DistanceSum d1=new DistanceSum();
+		DistanceSum d2=new DistanceSum();
+		DistanceSum d3=new DistanceSum();
+		d1.set(5,6);
+		d2.set(6,6);
+		d3=d3.add(d1, d2);
+		d3.disp();
+		
+	}
+
+}

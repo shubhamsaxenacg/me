@@ -1,0 +1,22 @@
+package TrainingAssignment;
+
+public abstract class Training {
+	protected static int id = 0;
+	protected String subject;
+	protected int fees;
+	
+	//......Constructor is called from other classes which inherits this class
+	public Training(String subject, int fees) {
+				
+		this.subject = subject;
+		this.fees = fees;
+		
+		id++;
+	}
+
+	public static int getId() {
+		return id;
+	}
+
+	abstract int getOrderValue();
+}

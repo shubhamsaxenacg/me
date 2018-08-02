@@ -1,0 +1,21 @@
+package com.cg.test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import com.cg.calculator.Maths;
+
+import junit.framework.Assert;
+
+class AdditionTest {
+
+	@Test
+	void testAddTwoPositive() {
+		Maths math = new Maths();
+		int ans = math.add(3,4);
+		
+	}
+	
+
+}

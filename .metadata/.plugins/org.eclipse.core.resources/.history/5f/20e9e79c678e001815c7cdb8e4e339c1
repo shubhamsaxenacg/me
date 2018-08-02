@@ -1,0 +1,18 @@
+package question4;
+
+public class ClassB extends ClassA{
+
+	private int b;
+	ClassB()
+	{
+		System.out.println("This is class B");
+	}
+	
+	void display()
+	{
+		super.display();
+		System.out.println("Value of a: "+a);	//Inheriting the protected variable from ClassA
+		System.out.println("Value of a: "+b);
+	
+	}
+}

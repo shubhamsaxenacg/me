@@ -1,0 +1,9 @@
+package question4;
+
+public class TestSingleInheritence {
+	
+	public static void main(String args[])
+	{
+		ClassB classB = new ClassB();
+	}
+}

@@ -1,0 +1,5 @@
+package InterfaceAssignment1;
+
+public interface A {
+	
+}

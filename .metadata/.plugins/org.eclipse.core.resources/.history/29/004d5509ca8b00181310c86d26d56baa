@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class TenInput {
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		boolean checkEqual;
+		
+		for(int i=0; i<10; i++) {
+			System.out.print("Enter string: ");
+			String stringCheck = sc.next();
+		
+			String reverse = new StringBuffer(stringCheck).reverse().toString();
+			
+			checkEqual = reverse.equals(stringCheck);
+			
+			if(checkEqual)
+			{
+				
+					String stringToCheck[j++] = stringCheck;
+				
+				
+			}
+			else
+			{
+				System.out.println("Not Palindrome");
+
+			}
+		}
+		for(i=0; i<stringToCheck.length; i++) {
+			System.out.println( stringToCheck[i]);
+		}
+		
+	}
+}

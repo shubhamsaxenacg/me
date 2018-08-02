@@ -1,0 +1,129 @@
+package com.cg.collections;
+
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.TreeSet;
+import java.util.function.Consumer;
+
+public class TestCollection {
+
+	public static void main(String[] args) {
+		
+	//......Arraylist for laptop	
+		ArrayList<Laptop> laptop = new ArrayList<Laptop>();
+		laptop.add(new Laptop("HP","2.0","windows 10", "I3"));
+		laptop.add(new Laptop("dell","3.0","windows 15", "I3"));
+		laptop.add(new Laptop("HP","1.0","windows 7", "I2"));
+		
+		laptop.stream().forEach((lapp) -> System.out.println(lapp)); //.....Printing the list
+	
+		
+	//......Arraylist for Car
+		System.out.println("");
+		ArrayList<Car> car = new ArrayList<Car>();
+		car.add(new Car("m","Maruti","2018","1_000_000"));
+		car.add(new Car("ms","Alto","2008","1_300_000"));
+		car.add(new Car("chevrolet","Impala","2010","9_000_000"));
+		
+		laptop.stream().forEach((lapp) -> System.out.println(lapp)); //.....Printing the list
+	
+		
+	//......Arraylist for Television
+		System.out.println("");
+		ArrayList<Television> television = new ArrayList<Television>();
+		television.add(new Television("LG","LCD",true, 10_000));
+		television.add(new Television("Croma","LED",false, 35_000));
+		television.add(new Television("Samsung","Plasma",true, 40_000));
+		
+		television.stream().forEach((tel) -> System.out.println(tel)); //.....Printing the list
+	
+		
+	//......Arraylist for CellPhone
+		System.out.println("");
+		ArrayList<CellPhone> cellPhone = new ArrayList<CellPhone>();
+		cellPhone.add(new CellPhone("MI","note4","MI phone ","kitkat", 13_000));
+		cellPhone.add(new CellPhone("onePlus","5T","one plus phone ","kitkat", 35_000));
+		cellPhone.add(new CellPhone("micromax","canvas","micromax phone","kitkat", 10_000));
+		
+		cellPhone.stream().forEach((cp) -> System.out.println(cp)); //.....Printing the list
+		
+	//......Arraylist for School
+		System.out.println("");
+		ArrayList<School> school = new ArrayList<School>();
+		school.add(new School("amity","delhi","delhi",3));
+		school.add(new School("symbiosis","up","g2", 2));
+		school.add(new School("CG","Mumbai","airoli", 1));
+		
+		school.stream().forEach((sc) -> System.out.println(sc)); //.....Printing the list
+		
+		
+//.....Set doesn't accept duplicate values	
+		Set<Laptop>laptop1 = new HashSet<>();
+		System.out.println("");
+		laptop1.add(new Laptop("HP","2.0","windows 10", "I3"));
+		laptop1.add(new Laptop("HP","2.0","windows 17", "I3"));
+		laptop1.add(new Laptop("dell","2.6","windows 8", "I1"));
+		
+		laptop1.stream().forEach((lapt) -> System.out.println(lapt));
+		
+		
+		
+	//.... LinkedHash Set
+		Set<Student>student = new LinkedHashSet<Student>();
+		System.out.println("");
+		student.add(new Student(1, "Shubham", "mango"));
+		student.add(new Student(2, "Ron", "apple"));
+		student.add(new Student(3, "Dan", "grapes"));
+		
+		student.stream().forEach((stu) -> System.out.println(stu));
+		
+		
+		
+		Set<Student>student1 = new TreeSet<Student>();
+		System.out.println("");
+		student1.add(new Student(2, "Shubham", "mango"));
+		student1.add(new Student(1, "Ron", "apple"));
+		student1.add(new Student(3, "Dan", "grapes"));
+		
+		student1.stream().forEach((stud) -> System.out.println(stud));
+		
+		
+		
+		Set<Car>car1 = new TreeSet<Car>();
+		System.out.println("");
+		car1.add(new Car("m","Maruti","2018","1_000_000"));
+		car1.add(new Car("ms","Alto","2008","1_300_000"));
+		car1.add(new Car("chevrolet","Impala","2010","9_000_000"));
+		
+		car1.stream().forEach((ca) -> System.out.println(ca));
+		
+		
+		
+		Map<String,String>studentHash = new HashMap<>();
+		System.out.println("");
+		studentHash.put("Mango", "Shubham");
+		studentHash.put("Grapes", "Ron");
+		studentHash.put("Apple", "Sam");
+		
+		System.out.println(studentHash);
+		System.out.println(studentHash.get("Mango"));
+	
+	//.........Traversing using entryset............
+		Set<Entry<String, String>> studentSet = studentHash.entrySet();
+		studentSet.stream().forEach((Entry e) -> System.out.println(e.getKey()+ " "+e.getValue()));
+		
+	//........Traversing using keyset..........
+		Set<String> keyStudent = studentHash.keySet();
+		for(String key: keyStudent) {
+			System.out.println("key: "+key+" Value: "+studentHash.get(key));
+		}
+	}
+
+
+}

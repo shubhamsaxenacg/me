@@ -1,0 +1,19 @@
+package whiteSpace;
+
+import java.util.Scanner;
+
+public class WhiteSpace {
+	
+	public static void main(String args[])
+	{
+		Scanner scanner = new Scanner(System.in);
+		
+		String 
+		
+		
+		
+		scanner.close();
+	}
+
+
+}

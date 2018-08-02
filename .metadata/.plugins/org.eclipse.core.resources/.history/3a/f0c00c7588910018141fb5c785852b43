@@ -1,0 +1,39 @@
+package com.calculator.test;
+
+
+import org.junit.Assert.*;
+import org.junit.Test;
+
+import com.calculator.tax.CountrynotValidException;
+import com.calculator.tax.NamenotValidException;
+import com.calculator.tax.TaxCalculator;
+
+public class CalculatorTest {
+
+
+	@Test(expected = NamenotValidException.class)
+	public void nameNull() {
+		
+			TaxCalculator taxCalculator = new TaxCalculator();
+			taxCalculator.calculateTax("",true, 30_000);
+		
+	}
+	
+	@Test(expected = CountrynotValidException.class)
+	public void isIndian() {
+		
+			TaxCalculator taxCalculator = new TaxCalculator();
+			taxCalculator.calculateTax("Ron",false, 34000);
+		
+	}
+	
+	@Test
+	public void greaterThanOneLac() {
+			
+		TaxCalculator taxCalculator = new TaxCalculator();
+		float ans = taxCalculator.calculateTax("Ron",true, 200_000);
+		Assert.assertEquals(-7,ans);
+	}
+
+
+}

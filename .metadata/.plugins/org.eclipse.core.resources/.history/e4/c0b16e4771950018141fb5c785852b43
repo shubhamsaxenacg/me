@@ -1,0 +1,12 @@
+package com.cg.randominteger;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class List {
+	public static void main(String args[]) throws IOException
+	{
+		java.util.List<Object> lines = Collections.emptyList();
+	}
+}

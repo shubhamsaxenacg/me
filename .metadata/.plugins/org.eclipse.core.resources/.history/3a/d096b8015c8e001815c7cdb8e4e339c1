@@ -1,0 +1,25 @@
+package question1;
+
+public class Second extends First{
+	
+	int a2;
+	int b2;
+	Second()
+	{
+		System.out.println("Second Class");
+	}
+	Second(int a2, int b2)
+	{
+		super(a2, b2);
+		this.a2 = 50;
+		this.b2 = 100;
+		
+		System.out.println("this is Second class....");
+	}
+	
+	void display()
+	{
+		System.out.println("Displaying Second class...")
+	}
+
+}

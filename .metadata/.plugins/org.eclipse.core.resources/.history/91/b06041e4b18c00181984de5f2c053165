@@ -1,0 +1,52 @@
+package date;
+
+import java.util.Scanner;
+
+public class DateManipulate {
+	
+	
+// METHOD TO COMPARE SMALLER DATE......	
+	public static void smallerDateCompare(Date date) 
+	{
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter the day, month and year to compare....");
+		int day = scanner.nextInt();
+		int month = scanner.nextInt();
+		int year = scanner.nextInt();
+		Date compareDate = new Date(day,month,year); //Making new object to compare
+		boolean checkSmall = date.isSmaller(compareDate);
+		if(checkSmall)
+			System.out.println("the original date is latest.");
+		else
+			System.out.println("the original date is older or equal.");
+		scanner.close();
+	}
+
+	
+//........MAIN FUNCTION.............
+	public static void main(String args[]) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Enter the day, month and year....");
+		int day = scanner.nextInt();
+		int month = scanner.nextInt();
+		int year = scanner.nextInt();
+		
+//.......OBJECT CREATION.......		
+		Date date = new Date(day, month, year);
+		
+//......RETURN THE VALUE OF DATE IN D/M/Y FORMAT......		
+		String dateValue = date.toString();
+		System.out.println("the date is "+ dateValue);
+		
+//.......CHECK SMALLER DATE...........	
+		smallerDateCompare(date);
+		
+		
+		scanner.close();
+	}
+
+	
+
+}

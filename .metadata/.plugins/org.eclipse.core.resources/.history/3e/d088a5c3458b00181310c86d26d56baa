@@ -1,0 +1,50 @@
+package classes;
+import java.util.*;
+public class Classes {
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		int option;
+		System.out.print("Choose: \n 1. Rectangle \n 2. Temperature \n 3. Circle  \n 4. Date  \n 5. Calculator  \n 6. Customer  \n 7. Employee");
+		option = sc.nextInt();
+		
+		switch(option)
+		{
+			case 1:
+				int area,perimeter;
+				Rectangle rectangle = new Rectangle();
+				area = rectangle.areaOfRectangle();
+				perimeter = rectangle.perimeterOfRectangle();
+				System.out.print("Area is: "+area);
+				System.out.print("Perimeter is: "+perimeter);
+				break;
+				
+			case 2:
+				double fahrenheit;
+				Temperature temperature = new Temperature();
+				fahrenheit = temperature.convertCelciusToFahrenheit();
+				System.out.print("Temperature in fahrenheit is  "+fahrenheit);
+				break;
+				
+			case 3:
+				Circle circle = new Circle();
+				break;
+				
+			case 4:
+				Date date = new Date();
+				break;
+				
+			case 5:
+				Calculator calculator = new Calculator();
+				break;
+				
+			case 6:
+				Customer customer = new Customer();
+				break;
+				
+			case 7:
+				Employee employee = new Employee();
+				break;
+		}
+	}
+	sc.close();
+}

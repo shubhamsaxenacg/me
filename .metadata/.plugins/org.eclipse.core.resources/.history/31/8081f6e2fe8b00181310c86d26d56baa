@@ -1,0 +1,42 @@
+package whiteSpace;
+
+import java.util.Arrays;
+
+public class WhiteSpaceFunction {
+	
+	private String sentence;
+	private String sentenceArray[];
+	
+	public String getSentence() {
+		return sentence;
+	}
+
+	public void setSentence(String sentence) {
+		this.sentence = sentence;
+	}
+	
+	public String removeSpace()
+	{
+		String newSentence = sentence.replaceAll("\\s+", " ");
+		return newSentence;
+	}
+	
+	public String removeWord(String word, int position)
+	{
+		sentence = removeSpace();
+		sentenceArray = sentence.split(" ");
+		for(int i=0; i<sentenceArray.length; i++)
+		{
+			if(sentenceArray[i]==word && position==i+1)
+			{
+				sentenceArray[i]= "";
+				System.out.println("found at this pos");
+			}
+		}
+		String string = Arrays.toString(sentenceArray);
+		return string;
+		
+	}
+
+}
+

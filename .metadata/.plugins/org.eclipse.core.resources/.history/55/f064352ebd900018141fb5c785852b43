@@ -1,0 +1,24 @@
+package com.calculator.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Ignore;
+import org.junit.Test;
+
+import com.calculator.tax.TaxCalculator;
+
+public class CalculatorTest {
+
+	@Test
+	@Ignore
+	public void test() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	public void isIndian() {
+		TaxCalculator taxCalculator = new TaxCalculator();
+		String output = taxCalculator.calculateTax("Ron",false, 34000);
+	}
+
+}

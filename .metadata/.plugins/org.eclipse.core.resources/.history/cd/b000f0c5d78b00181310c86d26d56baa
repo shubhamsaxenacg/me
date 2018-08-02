@@ -1,0 +1,19 @@
+package MissingNumber;
+import java.util.*;
+
+//Contains Main Function
+
+public class MissingNumber {
+	public static void main(String args[]){
+		Scanner scan =new Scanner(System.in);
+		
+		//Declaration
+		int size, array[];
+		
+		System.out.println("Enter thew size of array...");
+		size = scan.nextInt();
+		
+		System.out.println(size);
+		scan.close();
+	}
+}

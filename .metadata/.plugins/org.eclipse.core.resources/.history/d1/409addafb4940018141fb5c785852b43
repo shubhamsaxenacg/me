@@ -1,0 +1,87 @@
+package com.cg.question2;
+
+import java.util.Scanner;
+
+public class MovieTest {
+public static void main(String args[]) {
+	
+	MovieDetailsList movieDetailsList = new MovieDetailsList();
+	Scanner scanner = new Scanner(System.in);
+	
+	int option;
+	do {
+		System.out.println("Enter your option.....");
+		System.out.println("1. Add");
+		System.out.println("2. Remove movie");
+		System.out.println("3. Remove all");
+		System.out.println("4. Get movie by movie name");
+		System.out.println("5. Get movie by genre");
+		System.out.println("6. Display");
+		System.out.println("7. Sort");
+		System.out.println("8. Exit");
+		
+		
+		option = scanner.nextInt();
+		
+		switch (option) {
+		case 1:
+			System.out.println("Enter moviename");
+			String mov_Name = scanner.next();
+			
+			System.out.println("Enter lead Actor");
+			String lead_actor = scanner.next();
+			
+			System.out.println("Enter lead Actress");
+			String lead_actress = scanner.next();
+			
+			System.out.println("Enter genre");
+			String genre = scanner.next();
+			movieDetailsList.add(mov_Name, lead_actor, lead_actress, genre);
+			break;
+			
+		case 2:
+			System.out.println("Enter moviename");
+			String movieToRemove = scanner.next();
+			movieDetailsList.removeMovie(movieToRemove);
+			break;
+			
+		case 3:
+			movieDetailsList.removeAllMovie();
+			break;
+			
+		case 4:
+			System.out.println("Enter moviename");
+			String getMovieByName = scanner.next();
+			movieDetailsList.findByMovieName(getMovieByName);
+			break;
+			
+		case 5:
+			System.out.println("Enter genre");
+			String getMovieByGenre = scanner.next();
+			movieDetailsList.findMovieByGenre(getMovieByGenre);
+			break;
+			
+		case 6:
+			System.out.println("Displaying Movie Details");
+			movieDetailsList.disp();
+			break;
+			
+		case 7:
+			System.out.println("sort by all categories");
+			movieDetailsList.sort();
+			break;
+
+
+		default:
+			System.out.println("Invalid Option");
+			break;
+		}
+		
+		
+		
+		
+	}while(option!=8);
+	scanner.close();
+}
+		
+}

@@ -1,0 +1,49 @@
+package com.cg.collections;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+
+public class TestCollection {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Laptop> laptop = new ArrayList<Laptop>();
+		laptop.add(new Laptop("HP","2.0","windows 10", "I3"));
+		laptop.add(new Laptop("dell","3.0","windows 15", "I3"));
+		laptop.add(new Laptop("HP","1.0","windows 7", "I2"));
+		for(Laptop lapp: laptop)
+			System.out.println(lapp);
+		
+		laptop.stream().forEach((lapp) -> System.out.println(lapp));
+		
+//		ArrayList<Car> car = new ArrayList<Car>();
+//		car.add(new Car("m","Maruti","2018","1_000_000"));
+//		car.add(new Car("ms","Alto","2008","1_300_000"));
+//		car.add(new Car("chevrolet","Impala","2010","9_000_000"));
+//		
+//		ArrayList<Television> television = new ArrayList<Television>();
+//		television.add(new Television("HP","2.0","windows 10", "I3"));
+//		television.add(new Television("dell","3.0","windows 15", "I3"));
+//		television.add(new Television("HP","1.0","windows 7", "I2"));
+//		
+//		ArrayList<Laptop> laptop = new ArrayList<Laptop>();
+//		laptop.add(new Laptop("HP","2.0","windows 10", "I3"));
+//		laptop.add(new Laptop("dell","3.0","windows 15", "I3"));
+//		laptop.add(new Laptop("HP","1.0","windows 7", "I2"));
+//		
+//		ArrayList<Laptop> laptop = new ArrayList<Laptop>();
+//		laptop.add(new Laptop("HP","2.0","windows 10", "I3"));
+//		laptop.add(new Laptop("dell","3.0","windows 15", "I3"));
+//		laptop.add(new Laptop("HP","1.0","windows 7", "I2"));
+//		
+//		
+//		Set<Laptop>laptop = new HashSet<>();
+//		
+//		laptop.add(new Laptop("HP","2.0","windows 10", "I3"));
+//		laptop.add(new Laptop("HP","2.0","windows 10", "I3"));
+//		laptop.add(new Laptop("dell","2.6","windows 8", "I1"));
+
+	}
+
+}

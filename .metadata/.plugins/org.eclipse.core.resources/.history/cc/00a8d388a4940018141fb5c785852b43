@@ -1,0 +1,29 @@
+package com.cg.question2;
+
+import java.util.Scanner;
+import java.util.TreeSet;
+import java.util.function.Predicate;
+
+public class MovieDetailsList {
+	public static void main(String args[]) {
+		Scanner scanner = new Scanner(System.in);
+		
+		
+		TreeSet<MovieDetails> treeSet = new TreeSet<>();
+		//(arg0,arg1) -> arg0.getMov_Name().compareTo(arg1.getMov_Name())
+		treeSet.add(new MovieDetails("moviename5","leadactor","leadactress","genre"));
+		treeSet.add(new MovieDetails("moviename2","leadactor2","leadactress2","genre2"));
+		treeSet.add(new MovieDetails("moviename3","leadactor3","leadactress3","genre3"));
+		treeSet.add(new MovieDetails("moviename4","leadactor4","leadactress4","genre4"));
+		treeSet.add(new MovieDetails("moviename4","leadactor4","leadactress4","genre4"));
+
+		
+//		Predicate<MovieDetails> fetchMovie = (MovieDetails) -> MovieDetails.getGenre().equals("genre3");
+//		Predicate<MovieDetails> fetchMovie1 = (MovieDetails) -> MovieDetails.getMov_Name().equals("moviename");
+//		//treeSet.stream().filter(fetchMovie).forEach(System.out::println);
+//		treeSet.removeIf(fetchMovie);
+		
+		treeSet.stream().forEach(System.out::println);
+		
+	}
+}

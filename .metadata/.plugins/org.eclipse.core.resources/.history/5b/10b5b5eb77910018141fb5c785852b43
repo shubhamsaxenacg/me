@@ -1,0 +1,8 @@
+package com.calculator.tax;
+
+public class CountrynotValidException extends Exception {
+
+	public CountrynotValidException(String message) {
+		super(message);
+	}
+}

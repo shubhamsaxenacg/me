@@ -1,0 +1,25 @@
+package com.cg.exception;
+
+public class Factorial {
+	
+	
+	public int getFactorial(int num) throws FactorialException, InvalidInputException
+	{
+		int factorial = 0;
+		if(num<2)
+		{
+			throw new InvalidInputException("Value is invalid");
+		}
+		
+		for(int i =1; i<num; i++)
+		{
+			factorial = factorial *i;
+		}
+		
+		if(factorial>2147483647)
+		{
+			throw new FactorialException("Value exceed limit");
+		}
+		return factorial;
+	}
+}

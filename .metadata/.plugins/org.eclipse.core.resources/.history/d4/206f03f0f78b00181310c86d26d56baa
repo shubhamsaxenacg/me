@@ -1,0 +1,25 @@
+package whiteSpace;
+
+import java.util.Scanner;
+
+public class WhiteSpace {
+	
+	public static void main(String args[])
+	{
+		WhiteSpaceFunction whiteSpaceFunction = new WhiteSpaceFunction();
+		Scanner scanner = new Scanner(System.in);
+		
+		String sentence;
+		System.out.println("Enter the sentence....");
+		sentence = scanner.nextLine();
+		
+		whiteSpaceFunction.setSentence(sentence);
+		
+		String test = whiteSpaceFunction.getSentence();
+		System.out.println(test);
+		
+		scanner.close();
+	}
+
+
+}

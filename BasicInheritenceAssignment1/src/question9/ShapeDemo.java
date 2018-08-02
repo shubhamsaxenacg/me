@@ -1,0 +1,15 @@
+package question9;
+
+public class ShapeDemo {
+	public static void main(String args[])
+	{
+		Polygon polygon = new Polygon();
+		polygon.draw();
+		
+		Shape shape1 = new Circle();
+		shape1.draw();
+		
+		Shape shape2 = new Rectangle();
+		shape2.draw();
+	}
+}

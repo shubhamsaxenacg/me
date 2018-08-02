@@ -1,0 +1,10 @@
+package com.calculator.tax;
+
+//.......NamenotvalidException extends Exception 
+//......Explicit exception which is type of checked Exception
+public class NamenotValidException extends RuntimeException {
+
+	public NamenotValidException(String message) {
+		super(message);
+	}
+}

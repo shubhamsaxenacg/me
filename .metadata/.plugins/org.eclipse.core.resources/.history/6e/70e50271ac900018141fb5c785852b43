@@ -1,0 +1,43 @@
+package MissingNumber;
+
+import java.util.Scanner;
+
+public class RemoveDuplicateChar {
+	
+	
+	public static void removeDupChar(String word)
+	{
+		int size = word.length();
+		char wordCharacter;
+		String newString = "";
+		
+		for(int i=0; i<size; i++)
+		{
+			wordCharacter = word.charAt(i);
+			if(wordCharacter!=' ')
+			{
+				newString = newString + wordCharacter;
+			}
+			word = word.replace(wordCharacter, ' ');
+			
+		}
+		System.out.println(newString);
+	}
+	
+	
+	
+	public static void main(String args[])
+	{
+		Scanner scan =new Scanner(System.in);
+		
+		System.out.println("Enter the word...");
+		String word = scan.next();
+		
+		
+		removeDupChar(word);
+		
+		
+		scan.close();
+	}
+
+}

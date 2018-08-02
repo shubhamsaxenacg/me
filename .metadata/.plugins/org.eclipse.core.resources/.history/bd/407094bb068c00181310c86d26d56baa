@@ -1,0 +1,22 @@
+package multiDimensionalArrayCheck;
+
+public class CheckArray {
+	
+	public void findElement(String array[][], int rowLength, int colLength, String element)
+	{
+		System.out.println("ffffffffffff");
+		for(int i=0; i< rowLength; i++)
+		{
+			for(int j=0; j< colLength; j++)
+			{
+				if(element.equals(array[rowLength][colLength]))
+				{
+					System.out.println(element+"Is Found At Position"+rowLength+"and"+colLength);
+				}
+				
+				
+			}
+		}
+	}
+
+}

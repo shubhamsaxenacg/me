@@ -1,0 +1,33 @@
+package BankFramework;
+
+public class CurrentAcc extends BankAcc{
+	
+	private final float creditLimit;
+	
+	public CurrentAcc(int accNo, String accNm, float accBal, float creditLimit) {
+		super(accNo, accNm, accBal);
+		this.creditLimit = creditLimit;
+	}
+
+	public float getCreditLimit() {
+		return creditLimit;
+	}
+
+	@Override
+	public void withdraw(float amount) {
+		float accBal = this.getAccBal();
+		if(amount> accBal+creditLimit)
+		{
+			accBal = accBal - amount; 
+		}
+		setAccBal(accBal);
+	}
+
+	@Override
+	public String toString() {
+		return "CurrentAcc [creditLimit=" + creditLimit + ", getCreditLimit()=" + getCreditLimit() + ", toString()="
+				+ super.toString() + ", getAccNo()=" + getAccNo() + ", getAccNm()=" + getAccNm() + ", getAccBal()="
+				+ getAccBal() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + "]";
+	}
+
+}

@@ -1,0 +1,14 @@
+package question7;
+
+import question4.ClassA;
+import question4.ClassB;
+
+public class OverridngTest {
+	public static void main(String args[])
+	{
+		ClassB classB = new ClassB(); 
+		classB.display();	//....Override the display function
+		
+	
+	}
+}

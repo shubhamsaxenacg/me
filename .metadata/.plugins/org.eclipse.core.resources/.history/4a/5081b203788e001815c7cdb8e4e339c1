@@ -1,0 +1,5 @@
+package TrainingAssignment;
+
+public class CorporateTraining extends Training{
+
+}

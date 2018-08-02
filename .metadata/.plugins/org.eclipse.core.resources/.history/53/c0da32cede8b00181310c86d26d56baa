@@ -1,0 +1,61 @@
+package MissingNumber;
+
+import java.util.*;
+
+public class FindName {
+	
+	//...........Method to input Array values called in Main...........
+		public static String[] inputArray(int size) 
+		{
+			Scanner scan =new Scanner(System.in);
+			String arrayElements[] = new String[size];
+			for(int i=0; i<size; i++)
+			{
+				arrayElements[i]= scan.next();
+			}
+			scan.close();
+			
+			return arrayElements;
+		}
+		
+		
+	//.........Method to check name.........
+		public static void findName(String array[],int size)
+		{
+			Scanner scan =new Scanner(System.in);
+			String searchString= new String[];
+			int count = 0;
+			System.out.println("Enter the word to search...");
+			searchString = scan.next();
+			for(int i=0; i<size;i++)
+			{
+				if(searchString.equals(array[i]))
+				{
+					count++;
+				}
+			}
+			System.out.println(searchString+" occured "+count+" times");
+			scan.close();
+			
+		}
+	
+	
+	//....... Main Function Starts here..........
+	public static void main(String args[])
+	{
+		Scanner scan =new Scanner(System.in);
+		
+		//Declaration
+		int size;
+		String array[];
+		
+		System.out.println("Enter the size of array...");
+		size = scan.nextInt();
+		
+		array = inputArray(size); //  inputArray takes the input from user into the array
+		findName(array,size); // Finds the name and return count
+		
+		scan.close();
+	}
+
+}

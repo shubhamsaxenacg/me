@@ -1,0 +1,28 @@
+package com.calculator.tax;
+
+import com.calculator.test.CalculatorTest;
+
+public class TaxCalculator {
+
+	public static int calculateTax(String name, boolean indian, int empSal) throws CountrynotValidException {
+		// TODO Auto-generated method stub
+		if (name == null)
+		{
+			
+				throw new CountrynotValidException("The employee should be indian");
+				
+			
+		}
+		return 0;
+	}
+
+	public static void main(String args[])
+	{
+		try {
+			calculateTax("Shubham",false,1000);
+		} catch (CountrynotValidException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,19 @@
+package com.calculator.tax;
+
+public class TaxCalculator {
+
+	public int calculateTax(String name, boolean indian, int empSal) {
+		// TODO Auto-generated method stub
+		if (name == null)
+		{
+			try {
+				throw new CountrynotValidException();
+			} catch (CountrynotValidException e) {
+				
+				System.out.println("The employee should be indian");
+			}
+		}
+		return 0;
+	}
+
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AdditionTest" project="TddDemo" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.cg.test.AdditionTest" time="0.056" displayname="AdditionTest" uniqueid="[engine:junit-jupiter]/[class:com.cg.test.AdditionTest]">
+    <testcase name="testAddOneNegativeOnePositive" classname="com.cg.test.AdditionTest" time="0.028" displayname="testAddOneNegativeOnePositive()" uniqueid="[engine:junit-jupiter]/[class:com.cg.test.AdditionTest]/[method:testAddOneNegativeOnePositive()]"/>
+    <testcase name="testAddtwoNegative" classname="com.cg.test.AdditionTest" time="0.028" displayname="testAddtwoNegative()" uniqueid="[engine:junit-jupiter]/[class:com.cg.test.AdditionTest]/[method:testAddtwoNegative()]"/>
+    <testcase name="testAddTwoPositive" classname="com.cg.test.AdditionTest" time="0.0" displayname="testAddTwoPositive()" uniqueid="[engine:junit-jupiter]/[class:com.cg.test.AdditionTest]/[method:testAddTwoPositive()]"/>
+  </testsuite>
+</testrun>

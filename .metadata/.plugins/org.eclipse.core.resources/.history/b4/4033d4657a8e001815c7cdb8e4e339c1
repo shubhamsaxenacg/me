@@ -1,0 +1,17 @@
+package TrainingAssignment;
+
+public class PublicTraining extends Training {
+
+	private int participants;
+
+	public PublicTraining(String subject, int fees, int participants) {
+		super(subject, fees);
+		this.participants = participants;
+	}
+
+	public int getOrderValue() {
+
+		return fees * participants;
+	}
+
+}

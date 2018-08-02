@@ -1,0 +1,25 @@
+package com.cg.exception;
+
+import java.util.Scanner;
+
+public class ExceptionTest {
+
+	public static void main(String[] args) {
+		
+		Factorial fact = new Factorial();
+		
+		System.out.println("Enter the number");
+		Scanner scanner = new Scanner(System.in);
+		int value = scanner.nextInt();
+		
+		try {
+			int factorial = fact.getFactorial(value);
+			System.out.println("factorial is "+factorial);
+		} catch (FactorialException | InvalidInputException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

@@ -1,0 +1,23 @@
+package BankFramework;
+
+public class BankTest {
+	public static void main(String args[])
+	{
+		BankFactory bankfactory = new MMBankFactory();
+		
+		SavingAcc savingAcc = bankfactory.getNewSavingAcc(10,"Shubham" , 10_000 , true);
+		
+		
+		bankfactory.getNewSavingAcc(10,"Shubham" , 10_000 , true).withdraw(1000);
+		 bankfactory.getNewCurrentAcc(10,"Subhjmnm" , 50_000 , 1000).withdraw(5_000);
+		 
+		String displaySaving = bankfactory.getNewSavingAcc(10,"Shubham" , 10_000 , true).toString();
+		System.out.println(displaySaving);
+		
+		String displayCurrent=  bankfactory.getNewCurrentAcc(10,"Subhjmnm" , 50_000 , 1000).toString();
+		System.out.println(displayCurrent);
+		
+
+		
+	}
+}

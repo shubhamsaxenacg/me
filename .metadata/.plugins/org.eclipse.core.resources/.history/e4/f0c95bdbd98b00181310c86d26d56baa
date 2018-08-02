@@ -1,0 +1,25 @@
+package MissingNumber;
+
+import java.util.Scanner;
+
+public class FindNumber {
+	
+	
+	public static void main(String args[])
+	{
+		Scanner scan =new Scanner(System.in);
+		
+		//Declaration
+		int size; 
+		String array[];
+		
+		System.out.println("Enter the size of array...");
+		size = scan.nextInt();
+		
+		array = inputArray(size); //inputArray takes the input from user into the array
+		missingNumber(array,size); // Finds the missing number and prints value
+		
+		scan.close();
+	}
+
+}

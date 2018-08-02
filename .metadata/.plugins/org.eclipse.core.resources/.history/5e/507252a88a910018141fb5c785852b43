@@ -1,0 +1,50 @@
+package com.calculator.tax;
+
+public class MainFunction {
+
+	public static void main(String[] args) {
+		TaxCalculator tax = new TaxCalculator();
+		float taxValue;
+				
+		try 
+		{
+			taxValue = tax.calculateTax("", true, 30_000);
+			System.out.println("Tax amount is"+taxValue);
+		}
+		catch (NamenotValidException e) {
+			e.printStackTrace();
+		}
+		
+		try 
+		{
+			taxValue = tax.calculateTax("Ron", false, 34_000);
+			System.out.println("Tax amount is"+taxValue);
+		}
+		catch (NamenotValidException e) {
+			e.printStackTrace();
+		}
+		
+		try 
+		{
+			taxValue = tax.calculateTax("Tim", true, 1000);
+			System.out.println("Tax amount is"+taxValue);
+		}
+		catch (NamenotValidException e) {
+			e.printStackTrace();
+		}
+		
+		try 
+		{
+			taxValue = tax.calculateTax("Jack", true, 55_000);
+			System.out.println("Tax amount is"+taxValue);
+		}
+		catch (NamenotValidException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+
+	}
+
+}

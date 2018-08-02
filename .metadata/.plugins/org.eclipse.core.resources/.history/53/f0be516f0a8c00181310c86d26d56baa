@@ -1,0 +1,31 @@
+package Discount;
+
+public class Calculate {
+	private double value;
+	private static final double discountPercentage = 35;
+	
+	public Calculate() {
+		value = 100;
+	}
+	
+	public double getValue() {
+		return value;
+	}
+	
+	public void setValue(int value) {
+		this.value = value;
+	}
+	
+	public double discountCalculate()
+	{
+		double discountValue = value * discountPercentage /100;
+		return discountValue;
+	}
+	
+	public double afterDiscountFinal(double )
+	{
+		int discountValue = value * discountPercentage /100;
+		return discountValue;
+	}
+	
+}

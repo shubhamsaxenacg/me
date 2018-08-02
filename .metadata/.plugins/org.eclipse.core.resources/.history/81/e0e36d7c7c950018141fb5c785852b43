@@ -1,0 +1,19 @@
+package com.cg.randominteger;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.function.Predicate;
+
+ class CheckInteger {
+	public static void main(String args[]) throws IOException
+	{
+		Scanner scanner = new Scanner(System.in);
+		List<Integer> number = new ArrayList<>();
+		number.add(scanner.nextInt());
+		
+		Predicate<Integer> predicate = (ArrayList -> ArrayList%2 == 0);
+		number.stream().filter(predicate).forEach(i->System.out.println("even"));
+	}
+}

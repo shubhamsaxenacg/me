@@ -1,0 +1,31 @@
+package com.cg.question1;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class CollectionObject {
+	
+	 public static void main(String args[])
+	 {
+		 Scanner scanner = new Scanner(System.in);
+		 SavingAccount saving[] = new SavingAccount[5];
+		 for(int i=0; i<5; i++)
+		 {
+			 saving[i] = new SavingAccount();
+			 System.out.println("Enter id: ");
+			 int id = scanner.nextInt();
+			 System.out.println("Enter account balance: ");
+			 int balance = scanner.nextInt();
+			 System.out.println("Enter account holder name: ");
+			 String name = scanner.next();
+			 System.out.println("Enter true if salary account: ");
+			 boolean salary = scanner.hasNext();
+			 
+		 }
+		 
+		 
+		 ArrayList<SavingAccount> savingAcc = new ArrayList<SavingAccount>();
+			
+	 }
+ 
+}

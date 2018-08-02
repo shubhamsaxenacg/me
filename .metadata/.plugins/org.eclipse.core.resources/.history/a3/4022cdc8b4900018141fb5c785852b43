@@ -1,0 +1,60 @@
+package in.co.cg.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import in.co.cg.calculator.Maths;
+
+public class CalcTest {
+
+	
+	@Test
+	public void testAddTwoPositive() {
+		Maths math = new Maths();
+		int ans = math.add(3,4);
+		Assert.assertEquals(7,ans);
+	}
+	
+	@Test
+	public void testAddtwoNegative()
+	{
+		Maths math = new Maths();
+		int ans = math.add(-3,-4);
+		Assert.assertEquals(-7,ans);
+	}
+	
+	@Test
+	public void testAddOneNegativeOnePositive()
+	{
+		Maths math = new Maths();
+		int ans = math.add(-3,4);
+		Assert.assertEquals(1,ans);
+	}
+	
+	@Test
+	public void testAddOneNegativeOneZero()
+	{
+		Maths math = new Maths();
+		int ans = math.add(-3,0);
+		Assert.assertEquals(-3,ans);
+	}
+	
+	@Test
+	public void testAddOnePositiveOneZero()
+	{
+		Maths math = new Maths();
+		int ans = math.add(3,0);
+		Assert.assertEquals(3,ans);
+	}
+	
+	@Test(expected = java.lang.ArithmeticException.class)
+	public void testNotInteger()
+	{
+		Maths math = new Maths();
+		math.add(10.34,0);
+	}
+
+
+}

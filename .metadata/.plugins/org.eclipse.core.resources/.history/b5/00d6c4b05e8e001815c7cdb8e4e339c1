@@ -1,0 +1,19 @@
+package question1;
+
+public class Two {
+	
+	public static void main(String args[])
+	{
+		First first = new Second(); //Upcasting
+		first.display();   //.......Displays function of Second Class.... i.e display function of object type 'Second'
+		
+//      first.displayNew(); //......Compiler checks if the display2 function is present in the reference type First..
+		
+		first.disp(); //....disp function is inherited by the Second object type
+		
+//		Second second = new First(); //...........ERROR ...Reference type must be same or parent of object type
+		
+		Second second = new Second();
+		second. display();
+	}
+}

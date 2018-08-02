@@ -1,0 +1,23 @@
+package com.cg.collections;
+
+public class Television {
+	String company;
+	String type;
+	boolean threeDEnabled;
+	int price;
+	public Television(String company, String type, boolean threeDEnabled, int price) {
+		super();
+		this.company = company;
+		this.type = type;
+		this.threeDEnabled = threeDEnabled;
+		this.price = price;
+	}
+	@Override
+	public String toString() {
+		return "Television [company=" + company + ", type=" + type + ", threeDEnabled=" + threeDEnabled + ", price="
+				+ price + "]";
+	}
+	
+	
+	
+}

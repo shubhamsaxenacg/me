@@ -1,0 +1,10 @@
+package com.cg.question2;
+
+import java.util.Scanner;
+
+public class Options {
+
+	public Options() {
+		
+	
+}

@@ -1,0 +1,19 @@
+package com.cg.question1;
+
+import java.util.ArrayList;
+
+public class CollectionObject {
+	
+	 public static void main(String args[])
+	 {
+		 ArrayList<SavingAccount> savingAcc = new ArrayList<SavingAccount>();
+			savingAcc.add(new SavingAccount(10_000, 12, "Shubham", true));
+			savingAcc.add(new SavingAccount(7_000, 10, "Ron", false));
+			savingAcc.add(new SavingAccount(15_000, 5, "Jon", true));
+			savingAcc.add(new SavingAccount(5_000, 1, "Tim", true));
+			savingAcc.add(new SavingAccount(25_000, 4, "Matt", false));
+			
+			savingAcc.stream().forEach((sa) -> System.out.println(sa));
+	 }
+ 
+}

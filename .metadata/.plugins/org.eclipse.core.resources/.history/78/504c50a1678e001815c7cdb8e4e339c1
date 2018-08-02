@@ -1,0 +1,15 @@
+package question4;
+
+public class ClassA {
+
+	protected int a;
+	
+	ClassA(){
+		System.out.println("This is class A");
+	}
+	
+	void display()
+	{
+		System.out.println("This is class A and value of a :"+a);
+	}
+}

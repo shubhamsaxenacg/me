@@ -1,0 +1,50 @@
+package com.cg.question2;
+
+import java.util.Comparator;
+
+import java.util.TreeSet;
+import java.util.function.Predicate;
+
+public class MovieDetailsList {
+	
+		TreeSet<MovieDetails> treeSet;
+		
+		public MovieDetailsList() {
+			
+			treeSet = new TreeSet<>((arg0,arg1) -> arg0.getMov_Name().compareTo(arg1.getMov_Name()));
+			
+		}
+		
+		public void add(String mov_Name, String lead_actor, String lead_actress, String genre) {
+			
+			treeSet.add(new MovieDetails(mov_Name, lead_actor, lead_actress, genre));
+			
+		}
+		
+		public void disp() {
+			treeSet.stream().forEach(System.out::println);
+		}
+		
+		
+		Comparator<MovieDetails> comparator = (arg0,arg1) -> arg0.getLead_actress().compareTo(arg1.getLead_actress());
+		treeSet = new TreeSet<>(comparator);
+		
+		
+		public void findByMovieName() {
+			Predicate<MovieDetails> fetchMovie1 = (MovieDetails) -> MovieDetails.getMov_Name().equals("moviename");
+			treeSet.stream().filter(fetchMovie).forEach(System.out::println);
+		}
+		
+		public void findMovieByGenre() {
+			Predicate<MovieDetails> fetchMovie = (MovieDetails) -> MovieDetails.getGenre().equals("genre3");
+			treeSet.stream().filter(fetchMovie).forEach(System.out::println);
+		}
+		Predicate<MovieDetails> fetchMovie = (MovieDetails) -> MovieDetails.getGenre().equals("genre3");
+		Predicate<MovieDetails> fetchMovie1 = (MovieDetails) -> MovieDetails.getMov_Name().equals("moviename");
+		
+		//treeSet.stream().filter(fetchMovie).forEach(System.out::println);
+		treeSet.removeIf(fetchMovie);
+		
+		treeSet.stream().forEach(System.out::println);
+	
+}
